@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Root View Controller-->
         <scene sceneID="ozI-jt-xOd">
             <objects>
-                <tabBarController id="I4X-Ut-a4f" sceneMemberID="viewController">
+                <tabBarController id="I4X-Ut-a4f" customClass="RootViewController" customModule="MyFashion" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MwK-NF-Fgg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

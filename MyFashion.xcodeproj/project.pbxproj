@@ -13,6 +13,17 @@
 		CEE29F9322E58D94001600E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE29F9122E58D94001600E7 /* LaunchScreen.storyboard */; };
 		CEE29F9E22E58D94001600E7 /* MyFashionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29F9D22E58D94001600E7 /* MyFashionTests.swift */; };
 		CEE29FA922E58D94001600E7 /* MyFashionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29FA822E58D94001600E7 /* MyFashionUITests.swift */; };
+		CEE29FBD22E590C0001600E7 /* ClothesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29FBB22E590C0001600E7 /* ClothesListViewController.swift */; };
+		CEE29FBE22E590C0001600E7 /* ClothesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE29FBC22E590C0001600E7 /* ClothesListViewController.xib */; };
+		CEE29FC422E5947B001600E7 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29FC322E5947B001600E7 /* TabView.swift */; };
+		CEE29FC722E5971E001600E7 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29FC622E5971E001600E7 /* NSObject+Extension.swift */; };
+		CEE29FC922E59757001600E7 /* TabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE29FC822E59757001600E7 /* TabView.xib */; };
+		CEE29FCE22E59B4B001600E7 /* TabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29FCC22E59B4B001600E7 /* TabCollectionViewCell.swift */; };
+		CEE29FCF22E59B4B001600E7 /* TabCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE29FCD22E59B4B001600E7 /* TabCollectionViewCell.xib */; };
+		CEE29FD122E59C27001600E7 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29FD022E59C27001600E7 /* UICollectionView+Extension.swift */; };
+		CEE29FD322E59FAF001600E7 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29FD222E59FAF001600E7 /* RootViewController.swift */; };
+		CEE29FD622E5A2B7001600E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29FD422E5A2B7001600E7 /* ViewController.swift */; };
+		CEE29FD722E5A2B7001600E7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE29FD522E5A2B7001600E7 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +56,17 @@
 		CEE29FA422E58D94001600E7 /* MyFashionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFashionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE29FA822E58D94001600E7 /* MyFashionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFashionUITests.swift; sourceTree = "<group>"; };
 		CEE29FAA22E58D94001600E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEE29FBB22E590C0001600E7 /* ClothesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListViewController.swift; sourceTree = "<group>"; };
+		CEE29FBC22E590C0001600E7 /* ClothesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClothesListViewController.xib; sourceTree = "<group>"; };
+		CEE29FC322E5947B001600E7 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		CEE29FC622E5971E001600E7 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		CEE29FC822E59757001600E7 /* TabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabView.xib; sourceTree = "<group>"; };
+		CEE29FCC22E59B4B001600E7 /* TabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEE29FCD22E59B4B001600E7 /* TabCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabCollectionViewCell.xib; sourceTree = "<group>"; };
+		CEE29FD022E59C27001600E7 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		CEE29FD222E59FAF001600E7 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		CEE29FD422E5A2B7001600E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEE29FD522E5A2B7001600E7 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +117,8 @@
 		CEE29F8722E58D93001600E7 /* MyFashion */ = {
 			isa = PBXGroup;
 			children = (
+				CEE29FC522E5970F001600E7 /* Extensions */,
+				CEE29FC022E593E2001600E7 /* Views */,
 				CEE29FB722E58F7A001600E7 /* Presentation */,
 				CEE29FB622E58EEA001600E7 /* Resources */,
 				CEE29F8822E58D93001600E7 /* AppDelegate.swift */,
@@ -133,6 +157,7 @@
 		CEE29FB722E58F7A001600E7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CEE29FB922E59056001600E7 /* ClothesList */,
 				CEE29FB822E58F7F001600E7 /* Root */,
 			);
 			path = Presentation;
@@ -142,8 +167,64 @@
 			isa = PBXGroup;
 			children = (
 				CEE29F8C22E58D93001600E7 /* Root.storyboard */,
+				CEE29FD222E59FAF001600E7 /* RootViewController.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		CEE29FB922E59056001600E7 /* ClothesList */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29FBA22E590A0001600E7 /* Contents */,
+				CEE29FBB22E590C0001600E7 /* ClothesListViewController.swift */,
+				CEE29FBC22E590C0001600E7 /* ClothesListViewController.xib */,
+			);
+			path = ClothesList;
+			sourceTree = "<group>";
+		};
+		CEE29FBA22E590A0001600E7 /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29FD422E5A2B7001600E7 /* ViewController.swift */,
+				CEE29FD522E5A2B7001600E7 /* ViewController.xib */,
+			);
+			path = Contents;
+			sourceTree = "<group>";
+		};
+		CEE29FC022E593E2001600E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29FC122E593E7001600E7 /* Tab */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEE29FC122E593E7001600E7 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29FCA22E59B21001600E7 /* CollectionViewCell */,
+				CEE29FC322E5947B001600E7 /* TabView.swift */,
+				CEE29FC822E59757001600E7 /* TabView.xib */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		CEE29FC522E5970F001600E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29FC622E5971E001600E7 /* NSObject+Extension.swift */,
+				CEE29FD022E59C27001600E7 /* UICollectionView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CEE29FCA22E59B21001600E7 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29FCC22E59B4B001600E7 /* TabCollectionViewCell.swift */,
+				CEE29FCD22E59B4B001600E7 /* TabCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +331,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE29FD722E5A2B7001600E7 /* ViewController.xib in Resources */,
+				CEE29FCF22E59B4B001600E7 /* TabCollectionViewCell.xib in Resources */,
 				CEE29F9322E58D94001600E7 /* LaunchScreen.storyboard in Resources */,
 				CEE29F9022E58D94001600E7 /* Assets.xcassets in Resources */,
 				CEE29F8E22E58D93001600E7 /* Root.storyboard in Resources */,
+				CEE29FBE22E590C0001600E7 /* ClothesListViewController.xib in Resources */,
+				CEE29FC922E59757001600E7 /* TabView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +362,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE29FD122E59C27001600E7 /* UICollectionView+Extension.swift in Sources */,
 				CEE29F8922E58D93001600E7 /* AppDelegate.swift in Sources */,
+				CEE29FC422E5947B001600E7 /* TabView.swift in Sources */,
+				CEE29FD322E59FAF001600E7 /* RootViewController.swift in Sources */,
+				CEE29FCE22E59B4B001600E7 /* TabCollectionViewCell.swift in Sources */,
+				CEE29FBD22E590C0001600E7 /* ClothesListViewController.swift in Sources */,
+				CEE29FD622E5A2B7001600E7 /* ViewController.swift in Sources */,
+				CEE29FC722E5971E001600E7 /* NSObject+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

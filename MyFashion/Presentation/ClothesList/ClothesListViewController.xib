@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClothesListViewController" customModule="MyFashion" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Ape-ca-DbG" id="LE4-Nt-hLm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Ape-ca-DbG">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAZ-yf-tpA" customClass="TabView" customModule="MyFashion" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="68"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="gOv-V4-AYT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Tgd-1G-Mw9" firstAttribute="trailing" secondItem="cAZ-yf-tpA" secondAttribute="trailing" id="3WK-sJ-yob"/>
+                <constraint firstItem="cAZ-yf-tpA" firstAttribute="top" secondItem="Tgd-1G-Mw9" secondAttribute="top" id="t3E-uR-kQm"/>
+                <constraint firstItem="cAZ-yf-tpA" firstAttribute="leading" secondItem="Tgd-1G-Mw9" secondAttribute="leading" id="zK6-JB-RKs"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Tgd-1G-Mw9"/>
+        </view>
+    </objects>
+</document>
