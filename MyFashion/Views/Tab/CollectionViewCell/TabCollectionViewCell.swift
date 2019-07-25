@@ -8,21 +8,23 @@
 
 import UIKit
 
-class TabCollectionViewCell: UICollectionViewCell {
+class TabCollectionViewCell: UICollectionViewCell, TabCollectionable {
 
     @IBOutlet weak var button: UIButton?
+    
+    var tab: Tab?
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configure(text: String, isCurrent: Bool) {
-        button?.setTitle(text, for: .normal)
-        if (isCurrent) {
-            button?.setTitleColor(.red, for: .normal)
-        } else {
-            button?.setTitleColor(.gray, for: .normal)
-        }
+    func configure(tabItem: Tab) {
+        self.tab = tabItem
+        button?.setTitle(tabItem.name, for: .normal)
     }
-
+    
+    @IBAction func didTappedButton(_ sender: UIButton) {
+        guard let t = tab else { return }
+        t.selectedHandler?(t)
+    }
 }

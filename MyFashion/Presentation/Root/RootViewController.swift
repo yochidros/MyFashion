@@ -22,10 +22,6 @@ final class RootViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let view = ClothesListViewController.init(nibName: ClothesListViewController.className, bundle: nil)
-        let nav = UINavigationController(rootViewController: view)
-        nav.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
-        self.setViewControllers([nav], animated: false)
     }
     
 }

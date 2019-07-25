@@ -8,13 +8,28 @@
 
 import UIKit
 
+struct Tab {
+    let index: Int
+    let name: String
+    let selectedHandler: ((Tab) -> Void)?
+}
+
+protocol TabCollectionable {
+    func configure(tabItem: Tab)
+}
+
 class TabView: UIView {
 
-    var tabItems: [String] = ["hello", "world"]
-    
+    var tabItems: [TabType] = [] {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+
     lazy var collectionView: UICollectionView = {
-        let collection = UICollectionView(frame: self.bounds, collectionViewLayout: UICollectionViewFlowLayout())
-        collection.backgroundColor = .red
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let collection = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
         self.addSubview(collection)
         return collection
     }()
@@ -38,13 +53,7 @@ class TabView: UIView {
         self.collectionView.register(type: TabCollectionViewCell.self)
         self.collectionView.dataSource = self
     }
-    
 
-}
-extension TabView: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 68)
-    }
 }
 
 extension TabView: UICollectionViewDataSource {
@@ -53,11 +62,32 @@ extension TabView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TabCollectionViewCell.className, for: indexPath)
-        if let c = cell as? TabCollectionViewCell {
-            let tab = tabItems[indexPath.row]
-            c.configure(text: tab, isCurrent: false)
+        guard tabItems.count > indexPath.row else {
+            return UICollectionViewCell()
+        }
+        return tabItems[indexPath.row].dequeueCollectionViewCell(collectionView, indexPath: indexPath)
+    }
+}
+
+indirect enum TabType {
+    case Normal(Tab)
+    
+    private var cellIdentifier: String {
+        switch self {
+        case .Normal:
+            return TabCollectionViewCell.className
+        }
+    }
+    
+    func dequeueCollectionViewCell(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath)
+        if let c = cell as? TabCollectionable {
+            switch self {
+            case .Normal(let tab):
+                c.configure(tabItem: tab)
+            }
         }
         return cell
     }
+    
 }

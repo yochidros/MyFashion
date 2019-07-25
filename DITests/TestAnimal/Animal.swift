@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import DI
+
+protocol Animal {
+    var name: String { get }
+    func sayHello() -> String
+}
+

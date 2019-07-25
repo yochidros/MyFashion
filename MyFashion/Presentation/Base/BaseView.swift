@@ -7,3 +7,26 @@
 //
 
 import Foundation
+import UIKit
+
+protocol BaseView {
+}
+protocol BasePresentation {
+    func viewDidLoad()
+    func viewWillAppear()
+    func viewDidAppear()
+    func viewWillDisAppear()
+    func viewDidDisAppear()
+}
+extension BasePresentation {
+    func viewDidLoad() {}
+    func viewWillAppear() {}
+    func viewDidAppear() {}
+    func viewWillDisAppear() {}
+    func viewDidDisAppear() {}
+}
+
+
+protocol BaseWireframe {
+    var viewController: UIViewController? { get set }
+}

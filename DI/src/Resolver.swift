@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+public protocol Resolver {
+    associatedtype Resolve
+    associatedtype ExDependency
+    static func resolve(by exDepends: ExDependency) -> Resolve
+    static func resolve() -> Resolve
+}

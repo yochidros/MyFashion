@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol ClothesListPresentation: BasePresentation {
+    var view: ClothesListView { get set }
+    var wireframe: ClothesListWireframe { get }
+}

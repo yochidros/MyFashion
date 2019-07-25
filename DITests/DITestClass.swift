@@ -7,3 +7,16 @@
 //
 
 import Foundation
+@testable import DI
+
+class DITestClass: NSObject, Injectable {
+
+    let name: String
+    struct Dependency {
+        let name: String
+    }
+
+    required init(dependency: Dependency) {
+        self.name = dependency.name
+    }
+}

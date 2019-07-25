@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import DI
+
+public class Dog: Animal, Injectable{
+    public typealias Dependency = String
+
+    var name: String
+    
+    public required init(dependency: Dependency) {
+       self.name = dependency
+    }
+
+    func sayHello() -> String {
+        return "hooo!"
+    }
+}
