@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClothesListViewController" customModule="MyFashion" customModuleProvider="target">
             <connections>
+                <outlet property="tabView" destination="cAZ-yf-tpA" id="0hi-gQ-97L"/>
                 <outlet property="view" destination="Ape-ca-DbG" id="LE4-Nt-hLm"/>
             </connections>
         </placeholder>
