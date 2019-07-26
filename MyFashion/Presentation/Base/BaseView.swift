@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-protocol BaseView {
+protocol BaseView: class {
 }
 
-protocol BasePresentation {
+protocol BasePresentation: class {
     func viewDidLoad()
     func viewWillAppear()
     func viewDidAppear()

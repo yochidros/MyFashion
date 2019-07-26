@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol RootView: class, BaseView {
+protocol RootView: BaseView {
     var presenter: RootPresentation? { get set }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol RootPresentation: class, BasePresentation {
+protocol RootPresentation: BasePresentation {
     var view: RootView? { get set }
     var wireframe: RootWireframe { get }
     

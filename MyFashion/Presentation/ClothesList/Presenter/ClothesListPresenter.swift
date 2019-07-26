@@ -9,7 +9,7 @@
 import Foundation
 import DI
 
-final class ClothesListPresenter: NSObject, ClothesListPresentation, Injectable {
+final class ClothesListPresenter: ClothesListPresentation, Injectable {
 
     typealias Dependency = ClothesListWireframe
     var view: ClothesListView?
