@@ -15,6 +15,7 @@ class TabView: UIView {
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
+        dump(layout)
         let collection = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
         self.addSubview(collection)
         return collection
@@ -43,6 +44,7 @@ class TabView: UIView {
     private func prepareCollectionView() {
         self.collectionView.register(type: TabCollectionViewCell.self)
         self.collectionView.dataSource = self
+        
     }
 
 }

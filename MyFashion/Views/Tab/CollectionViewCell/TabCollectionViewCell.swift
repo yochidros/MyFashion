@@ -12,18 +12,18 @@ class TabCollectionViewCell: UICollectionViewCell, TabCollectionable {
 
     @IBOutlet weak var button: UIButton?
     
-    var tab: Tab?
-    
+    private var handler: (() -> Void)?
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configure(tabItem: Tab) {
-        self.tab = tabItem
-        button?.setTitle(tabItem.name, for: .normal)
+    func configure(name: String, handler: (() -> Void)?) {
+        button?.setTitle(name, for: .normal)
+        self.handler = handler
     }
-    
+
     @IBAction func didTappedButton(_ sender: UIButton) {
-        tab?.selectTab()
+        handler?()
     }
 }

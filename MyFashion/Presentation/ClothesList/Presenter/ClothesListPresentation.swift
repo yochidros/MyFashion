@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import Domain
 
 protocol ClothesListPresentation: BasePresentation {
     var view: ClothesListView? { get set }
     var wireframe: ClothesListWireframe { get }
+    var useCase: ClothesListUseCase { get }
 }

@@ -9,11 +9,11 @@
 import Foundation
 
 public struct Tab {
-    let index: Int
-    let name: String
-    let selectedHandler: ((Tab) -> Void)?
+    public let index: Int
+    public let name: String
+    public var selectedHandler: ((Tab) -> Void)?
     
-    func selectTab() {
+    public func selectTab() {
         selectedHandler?(self)
     }
 }

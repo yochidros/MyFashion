@@ -8,13 +8,15 @@
 
 import Foundation
 import UIKit
+import Domain
 
 final class ClothesListRouter: ClothesListWireframe {
     var viewController: UIViewController?
     
     static func assembleModule() -> UIViewController {
         let router = ClothesListRouter()
-        let presenter = ClothesListPresenter(dependency: router)
+        let useCase = ClothesListUseCaseResolver.resolve()
+        let presenter = ClothesListPresenter(dependency: .init(wirefame: router, useCase: useCase))
         let viewController = ClothesListViewController(dependency: presenter)
         presenter.view = viewController
         router.viewController = viewController

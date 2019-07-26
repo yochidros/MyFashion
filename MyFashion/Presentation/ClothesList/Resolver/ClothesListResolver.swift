@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import DI
 
-final class ClothesListResolver: Resolver {
+class ClothesListResolver: Resolver {
 
     typealias Resolve = UIViewController
     typealias ExDependency = Never

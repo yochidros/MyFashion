@@ -10,10 +10,11 @@ import Foundation
 import DI
 import Data
 
-protocol ClothesListRepository {
+public protocol ClothesListRepository {
     var dataStore: ClothesListDataStore { get }
     func fetchTabItems(onSuccess: @escaping ([TabEntity]) -> Void, onFailure: @escaping (Error) -> Void)
 }
+
 
 class ClothesListRepositoryImpl: ClothesListRepository, Injectable {
     typealias Dependency = ClothesListDataStore

@@ -33,6 +33,11 @@
 		CE4F70CD22EAB535002E19A9 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4F707322EAA384002E19A9 /* Data.framework */; };
 		CE4F70CE22EAB535002E19A9 /* DI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEABD07622E9975200F782A5 /* DI.framework */; };
 		CE4F70D122EAB7F3002E19A9 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F70D022EAB7F3002E19A9 /* Tab.swift */; };
+		CE4F70D322EAD309002E19A9 /* ClothesListRepositoryResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F70D222EAD309002E19A9 /* ClothesListRepositoryResolver.swift */; };
+		CE4F70D522EAD3A1002E19A9 /* ClothesListUseCaseResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F70D422EAD3A1002E19A9 /* ClothesListUseCaseResolver.swift */; };
+		CE4F70D722EAD74C002E19A9 /* ClothesListDataStoreResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F70D622EAD74C002E19A9 /* ClothesListDataStoreResolver.swift */; };
+		CE4F70DB22EAE37E002E19A9 /* ClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F70D922EAE37E002E19A9 /* ClothesViewController.swift */; };
+		CE4F70DC22EAE37E002E19A9 /* ClothesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4F70DA22EAE37E002E19A9 /* ClothesViewController.xib */; };
 		CEABD06322E978C400F782A5 /* ClothesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD06222E978C400F782A5 /* ClothesListView.swift */; };
 		CEABD06622E978EC00F782A5 /* ClothesListPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD06522E978EC00F782A5 /* ClothesListPresentation.swift */; };
 		CEABD06822E9792000F782A5 /* ClothesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD06722E9792000F782A5 /* ClothesListPresenter.swift */; };
@@ -191,6 +196,11 @@
 		CE4F70C622EAB4AF002E19A9 /* ClothesListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothesListUseCase.swift; sourceTree = "<group>"; };
 		CE4F70CB22EAB4FC002E19A9 /* ClothesListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListRepository.swift; sourceTree = "<group>"; };
 		CE4F70D022EAB7F3002E19A9 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		CE4F70D222EAD309002E19A9 /* ClothesListRepositoryResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListRepositoryResolver.swift; sourceTree = "<group>"; };
+		CE4F70D422EAD3A1002E19A9 /* ClothesListUseCaseResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListUseCaseResolver.swift; sourceTree = "<group>"; };
+		CE4F70D622EAD74C002E19A9 /* ClothesListDataStoreResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListDataStoreResolver.swift; sourceTree = "<group>"; };
+		CE4F70D922EAE37E002E19A9 /* ClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesViewController.swift; sourceTree = "<group>"; };
+		CE4F70DA22EAE37E002E19A9 /* ClothesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClothesViewController.xib; sourceTree = "<group>"; };
 		CEABD06222E978C400F782A5 /* ClothesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListView.swift; sourceTree = "<group>"; };
 		CEABD06522E978EC00F782A5 /* ClothesListPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListPresentation.swift; sourceTree = "<group>"; };
 		CEABD06722E9792000F782A5 /* ClothesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListPresenter.swift; sourceTree = "<group>"; };
@@ -377,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4F709622EAA498002E19A9 /* ClothesListDataStore.swift */,
+				CE4F70D622EAD74C002E19A9 /* ClothesListDataStoreResolver.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -439,6 +450,7 @@
 			children = (
 				CE4F70C522EAB4AF002E19A9 /* ClothesListTranslater.swift */,
 				CE4F70C622EAB4AF002E19A9 /* ClothesListUseCase.swift */,
+				CE4F70D422EAD3A1002E19A9 /* ClothesListUseCaseResolver.swift */,
 			);
 			path = ClothesList;
 			sourceTree = "<group>";
@@ -455,6 +467,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4F70CB22EAB4FC002E19A9 /* ClothesListRepository.swift */,
+				CE4F70D222EAD309002E19A9 /* ClothesListRepositoryResolver.swift */,
 			);
 			path = ClothesList;
 			sourceTree = "<group>";
@@ -465,6 +478,15 @@
 				CE4F70D022EAB7F3002E19A9 /* Tab.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CE4F70D822EAE36C002E19A9 /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				CE4F70D922EAE37E002E19A9 /* ClothesViewController.swift */,
+				CE4F70DA22EAE37E002E19A9 /* ClothesViewController.xib */,
+			);
+			path = Contents;
 			sourceTree = "<group>";
 		};
 		CEABD06422E978D500F782A5 /* Presenter */ = {
@@ -648,6 +670,7 @@
 		CEE29FB922E59056001600E7 /* ClothesList */ = {
 			isa = PBXGroup;
 			children = (
+				CE4F70D822EAE36C002E19A9 /* Contents */,
 				CEABD0A622E9B51200F782A5 /* Resolver */,
 				CEABD06D22E97C1400F782A5 /* Wireframe */,
 				CEABD06C22E97AB600F782A5 /* ViewController */,
@@ -1015,6 +1038,7 @@
 				CEE29F8E22E58D93001600E7 /* Root.storyboard in Resources */,
 				CEE29FBE22E590C0001600E7 /* ClothesListViewController.xib in Resources */,
 				CEE29FC922E59757001600E7 /* TabView.xib in Resources */,
+				CE4F70DC22EAE37E002E19A9 /* ClothesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1039,6 +1063,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4F70D722EAD74C002E19A9 /* ClothesListDataStoreResolver.swift in Sources */,
 				CE4F709722EAA498002E19A9 /* ClothesListDataStore.swift in Sources */,
 				CE4F709522EAA46D002E19A9 /* TabEntity.swift in Sources */,
 			);
@@ -1058,8 +1083,10 @@
 			files = (
 				CE4F70CC22EAB4FC002E19A9 /* ClothesListRepository.swift in Sources */,
 				CE4F70C822EAB4AF002E19A9 /* ClothesListUseCase.swift in Sources */,
+				CE4F70D322EAD309002E19A9 /* ClothesListRepositoryResolver.swift in Sources */,
 				CE4F70D122EAB7F3002E19A9 /* Tab.swift in Sources */,
 				CE4F70C722EAB4AF002E19A9 /* ClothesListTranslater.swift in Sources */,
+				CE4F70D522EAD3A1002E19A9 /* ClothesListUseCaseResolver.swift in Sources */,
 				CE4F70C222EAB484002E19A9 /* Translater.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1103,6 +1130,7 @@
 				CE4F703422EA9337002E19A9 /* RootRouter.swift in Sources */,
 				CE4F703E22EA9A85002E19A9 /* ClothesListRouter.swift in Sources */,
 				CEABD06322E978C400F782A5 /* ClothesListView.swift in Sources */,
+				CE4F70DB22EAE37E002E19A9 /* ClothesViewController.swift in Sources */,
 				CE4F703222EA9228002E19A9 /* RootWireframe.swift in Sources */,
 				CEE29F8922E58D93001600E7 /* AppDelegate.swift in Sources */,
 				CE4F704222EA9D5B002E19A9 /* Tab.swift in Sources */,
@@ -1231,7 +1259,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Data/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1262,7 +1290,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Data/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1332,7 +1360,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1363,7 +1391,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

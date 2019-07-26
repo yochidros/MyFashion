@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ClothesListView {
     var presenter: ClothesListPresentation { get set }
     func prepareTab(tabs: [TabType])
+    func preparePageViewController(pages: [UIViewController])
+    func displayViewController(index: Int)
 }

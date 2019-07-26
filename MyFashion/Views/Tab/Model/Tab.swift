@@ -8,19 +8,10 @@
 
 import Foundation
 import UIKit
-
-struct Tab {
-    let index: Int
-    let name: String
-    let selectedHandler: ((Tab) -> Void)?
-    
-    func selectTab() {
-       selectedHandler?(self)
-    }
-}
+import Domain
 
 protocol TabCollectionable {
-    func configure(tabItem: Tab)
+    func configure(name: String, handler: (() -> Void)?)
 }
 
 indirect enum TabType {
@@ -38,7 +29,9 @@ indirect enum TabType {
         if let c = cell as? TabCollectionable {
             switch self {
             case .Normal(let tab):
-                c.configure(tabItem: tab)
+                c.configure(name: tab.name) { [tab] in
+                   tab.selectTab()
+                }
             }
         }
         return cell
