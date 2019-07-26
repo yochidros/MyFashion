@@ -32,10 +32,17 @@ class DITests: XCTestCase {
     
     func testResolverByExternalDepends() {
         let cat = AnimalResolver.resolve(by: (.cat, "make"))
-        XCTAssert("\(type(of: cat))" == "Cat")
-        XCTAssertFalse(cat.name == "cat")
-        XCTAssertTrue(cat.name == "make")
-        XCTAssert(cat.sayHello() == "meow!")
+        XCTAssertNotNil(cat)
+        XCTAssert("\(type(of: cat!))" == "Cat")
+        
+        XCTAssertFalse(cat!.name == "cat")
+        XCTAssertTrue(cat!.name == "make")
+        XCTAssert(cat!.sayHello() == "meow!")
+    }
+    
+    func testResolverByExternalDependsFailure() {
+        let cat = AnimalResolver.resolve(by: nil)
+        XCTAssertNil(cat)
     }
 }
 

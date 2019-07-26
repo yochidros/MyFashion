@@ -31,13 +31,13 @@ class AnimalResolver: Resolver {
             return Cat(dependency: "cat")
         }
     }
-    
-    static func resolve(by exDepends: (type: AnimalType, name: String)) -> Animal {
-        switch exDepends.type {
+    static func resolve(by exDepends: (type: AnimalType, name: String)?) -> Animal? {
+        guard let depends = exDepends else { return nil }
+        switch depends.type {
         case .dog:
-            return Dog(dependency: exDepends.name)
+            return Dog(dependency: depends.name)
         case .cat:
-            return Cat(dependency: exDepends.name)
+            return Cat(dependency: depends.name)
         }
     }
 }
