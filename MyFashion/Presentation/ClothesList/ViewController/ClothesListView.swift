@@ -10,5 +10,5 @@ import Foundation
 
 protocol ClothesListView {
     var presenter: ClothesListPresentation { get set }
-    func prepare()
+    func prepareTab(tabs: [TabType])
 }

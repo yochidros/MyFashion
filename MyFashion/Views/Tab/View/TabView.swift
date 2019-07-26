@@ -8,24 +8,10 @@
 
 import UIKit
 
-struct Tab {
-    let index: Int
-    let name: String
-    let selectedHandler: ((Tab) -> Void)?
-}
-
-protocol TabCollectionable {
-    func configure(tabItem: Tab)
-}
 
 class TabView: UIView {
-
-    var tabItems: [TabType] = [] {
-        didSet {
-            collectionView.reloadData()
-        }
-    }
-
+    private var tabItems: [TabType] = []
+    
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -49,6 +35,11 @@ class TabView: UIView {
         prepareCollectionView()
     }
     
+    func setItems(tabs: [TabType]) {
+        self.tabItems = tabs
+        self.collectionView.reloadData()
+    }
+    
     private func prepareCollectionView() {
         self.collectionView.register(type: TabCollectionViewCell.self)
         self.collectionView.dataSource = self
@@ -69,25 +60,3 @@ extension TabView: UICollectionViewDataSource {
     }
 }
 
-indirect enum TabType {
-    case Normal(Tab)
-    
-    private var cellIdentifier: String {
-        switch self {
-        case .Normal:
-            return TabCollectionViewCell.className
-        }
-    }
-    
-    func dequeueCollectionViewCell(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath)
-        if let c = cell as? TabCollectionable {
-            switch self {
-            case .Normal(let tab):
-                c.configure(tabItem: tab)
-            }
-        }
-        return cell
-    }
-    
-}

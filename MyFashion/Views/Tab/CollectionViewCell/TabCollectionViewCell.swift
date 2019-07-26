@@ -24,7 +24,6 @@ class TabCollectionViewCell: UICollectionViewCell, TabCollectionable {
     }
     
     @IBAction func didTappedButton(_ sender: UIButton) {
-        guard let t = tab else { return }
-        t.selectedHandler?(t)
+        tab?.selectTab()
     }
 }

@@ -20,6 +20,20 @@ final class ClothesListPresenter: ClothesListPresentation, Injectable {
     }
 
     func viewDidLoad() {
-        self.view?.prepare()
+        self.prepareTabs()
+    }
+    
+    func prepareTabs() {
+        let tabs = (0..<10).map({
+            TabType.Normal(
+                Tab(
+                    index: $0,
+                    name: "\($0)",
+                    selectedHandler: { (tab) in
+                        print(tab)
+                })
+            )
+        })
+        self.view?.prepareTab(tabs: tabs)
     }
 }

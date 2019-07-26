@@ -34,20 +34,8 @@ class ClothesListViewController: UIViewController, ClothesListView, Injectable {
         presenter.viewDidLoad()
     }
     
-    func prepare() {
-        let tabs = (0..<10).map({
-            TabType.Normal(
-                Tab(
-                    index: $0,
-                    name: "\($0)",
-                    selectedHandler: { [weak self] (tab) in
-                        print(tab)
-                        self?.pageViewController.setViewControllers(nil, direction: .forward, animated: true, completion: nil)
-                })
-            )
-        })
-        tabView?.tabItems = tabs
+    func prepareTab(tabs: [TabType]) {
+        self.tabView?.setItems(tabs: tabs)
     }
-
 }
 
