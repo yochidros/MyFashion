@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4F703222EA9228002E19A9 /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F703122EA9228002E19A9 /* RootWireframe.swift */; };
+		CE4F703422EA9337002E19A9 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F703322EA9337002E19A9 /* RootRouter.swift */; };
+		CE4F703722EA93A2002E19A9 /* RootPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F703622EA93A2002E19A9 /* RootPresentation.swift */; };
+		CE4F703922EA93C8002E19A9 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F703822EA93C8002E19A9 /* RootPresenter.swift */; };
+		CE4F703C22EA93F5002E19A9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F703B22EA93F5002E19A9 /* RootView.swift */; };
+		CE4F703E22EA9A85002E19A9 /* ClothesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F703D22EA9A85002E19A9 /* ClothesListRouter.swift */; };
 		CEABD06322E978C400F782A5 /* ClothesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD06222E978C400F782A5 /* ClothesListView.swift */; };
 		CEABD06622E978EC00F782A5 /* ClothesListPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD06522E978EC00F782A5 /* ClothesListPresentation.swift */; };
 		CEABD06822E9792000F782A5 /* ClothesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD06722E9792000F782A5 /* ClothesListPresenter.swift */; };
@@ -24,6 +30,7 @@
 		CEABD0A122E9B02300F782A5 /* AnimalResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD0A022E9B02300F782A5 /* AnimalResolver.swift */; };
 		CEABD0A322E9B16D00F782A5 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD0A222E9B16C00F782A5 /* Cat.swift */; };
 		CEABD0A522E9B3DC00F782A5 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD0A422E9B3DC00F782A5 /* Resolver.swift */; };
+		CEABD0A822E9B52100F782A5 /* ClothesListResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD0A722E9B52100F782A5 /* ClothesListResolver.swift */; };
 		CEE29F8922E58D93001600E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29F8822E58D93001600E7 /* AppDelegate.swift */; };
 		CEE29F8E22E58D93001600E7 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE29F8C22E58D93001600E7 /* Root.storyboard */; };
 		CEE29F9022E58D94001600E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE29F8F22E58D94001600E7 /* Assets.xcassets */; };
@@ -94,6 +101,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE4F703122EA9228002E19A9 /* RootWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
+		CE4F703322EA9337002E19A9 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		CE4F703622EA93A2002E19A9 /* RootPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresentation.swift; sourceTree = "<group>"; };
+		CE4F703822EA93C8002E19A9 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
+		CE4F703B22EA93F5002E19A9 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		CE4F703D22EA9A85002E19A9 /* ClothesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListRouter.swift; sourceTree = "<group>"; };
 		CEABD06222E978C400F782A5 /* ClothesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListView.swift; sourceTree = "<group>"; };
 		CEABD06522E978EC00F782A5 /* ClothesListPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListPresentation.swift; sourceTree = "<group>"; };
 		CEABD06722E9792000F782A5 /* ClothesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListPresenter.swift; sourceTree = "<group>"; };
@@ -112,6 +125,7 @@
 		CEABD0A022E9B02300F782A5 /* AnimalResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalResolver.swift; sourceTree = "<group>"; };
 		CEABD0A222E9B16C00F782A5 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		CEABD0A422E9B3DC00F782A5 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		CEABD0A722E9B52100F782A5 /* ClothesListResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListResolver.swift; sourceTree = "<group>"; };
 		CEE29F8522E58D93001600E7 /* MyFashion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFashion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE29F8822E58D93001600E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE29F8D22E58D93001600E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Root.storyboard; sourceTree = "<group>"; };
@@ -176,6 +190,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE4F703022EA9214002E19A9 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				CE4F703122EA9228002E19A9 /* RootWireframe.swift */,
+				CE4F703322EA9337002E19A9 /* RootRouter.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		CE4F703522EA9397002E19A9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CE4F703622EA93A2002E19A9 /* RootPresentation.swift */,
+				CE4F703822EA93C8002E19A9 /* RootPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CE4F703A22EA93E4002E19A9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29F8C22E58D93001600E7 /* Root.storyboard */,
+				CEE29FD222E59FAF001600E7 /* RootViewController.swift */,
+				CE4F703B22EA93F5002E19A9 /* RootView.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		CEABD06422E978D500F782A5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				CEABD06E22E97C2200F782A5 /* ClothesListWireframe.swift */,
+				CE4F703D22EA9A85002E19A9 /* ClothesListRouter.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -250,6 +293,14 @@
 				CEABD0A222E9B16C00F782A5 /* Cat.swift */,
 			);
 			path = TestAnimal;
+			sourceTree = "<group>";
+		};
+		CEABD0A622E9B51200F782A5 /* Resolver */ = {
+			isa = PBXGroup;
+			children = (
+				CEABD0A722E9B52100F782A5 /* ClothesListResolver.swift */,
+			);
+			path = Resolver;
 			sourceTree = "<group>";
 		};
 		CEE29F7C22E58D93001600E7 = {
@@ -329,8 +380,9 @@
 		CEE29FB822E58F7F001600E7 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				CEE29F8C22E58D93001600E7 /* Root.storyboard */,
-				CEE29FD222E59FAF001600E7 /* RootViewController.swift */,
+				CE4F703A22EA93E4002E19A9 /* ViewController */,
+				CE4F703522EA9397002E19A9 /* Presenter */,
+				CE4F703022EA9214002E19A9 /* Wireframe */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -338,6 +390,7 @@
 		CEE29FB922E59056001600E7 /* ClothesList */ = {
 			isa = PBXGroup;
 			children = (
+				CEABD0A622E9B51200F782A5 /* Resolver */,
 				CEABD06D22E97C1400F782A5 /* Wireframe */,
 				CEABD06C22E97AB600F782A5 /* ViewController */,
 				CEABD06422E978D500F782A5 /* Presenter */,
@@ -611,14 +664,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE29FD122E59C27001600E7 /* UICollectionView+Extension.swift in Sources */,
+				CE4F703722EA93A2002E19A9 /* RootPresentation.swift in Sources */,
+				CE4F703422EA9337002E19A9 /* RootRouter.swift in Sources */,
+				CE4F703E22EA9A85002E19A9 /* ClothesListRouter.swift in Sources */,
 				CEABD06322E978C400F782A5 /* ClothesListView.swift in Sources */,
+				CE4F703222EA9228002E19A9 /* RootWireframe.swift in Sources */,
 				CEE29F8922E58D93001600E7 /* AppDelegate.swift in Sources */,
 				CEABD06622E978EC00F782A5 /* ClothesListPresentation.swift in Sources */,
+				CEABD0A822E9B52100F782A5 /* ClothesListResolver.swift in Sources */,
 				CEE29FC422E5947B001600E7 /* TabView.swift in Sources */,
 				CEABD06F22E97C2200F782A5 /* ClothesListWireframe.swift in Sources */,
 				CEE29FD322E59FAF001600E7 /* RootViewController.swift in Sources */,
+				CE4F703922EA93C8002E19A9 /* RootPresenter.swift in Sources */,
 				CEE29FCE22E59B4B001600E7 /* TabCollectionViewCell.swift in Sources */,
 				CEABD06822E9792000F782A5 /* ClothesListPresenter.swift in Sources */,
+				CE4F703C22EA93F5002E19A9 /* RootView.swift in Sources */,
 				CEE29FBD22E590C0001600E7 /* ClothesListViewController.swift in Sources */,
 				CEABD06B22E97A3000F782A5 /* BaseView.swift in Sources */,
 				CEE29FC722E5971E001600E7 /* NSObject+Extension.swift in Sources */,

@@ -10,21 +10,18 @@ import UIKit
 import DI
 
 class ClothesListViewController: UIViewController, ClothesListView, Injectable {
-    @IBOutlet weak var tabView: TabView?
+    typealias Dependency = ClothesListPresentation
     
+    @IBOutlet weak var tabView: TabView?
     var presenter: ClothesListPresentation
     
     fileprivate lazy var pageViewController: UIPageViewController = {
         let page = UIPageViewController(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: nil)
         return page
     }()
-    
-    struct Dependency {
-        let presenter: ClothesListPresentation
-    }
-    
+
     required init(dependency: ClothesListViewController.Dependency) {
-        self.presenter = dependency.presenter
+        self.presenter = dependency
         super.init(nibName: ClothesListViewController.className, bundle: nil)
     }
     

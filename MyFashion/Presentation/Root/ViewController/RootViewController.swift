@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-final class RootViewController: UITabBarController {
+final class RootViewController: UITabBarController, RootView {
+    var presenter: RootPresentation?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -22,6 +23,10 @@ final class RootViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let presentation = RootResolver.resolve(by: self) {
+            self.presenter = presentation
+        }
+        self.presenter?.prepare()
     }
     
 }

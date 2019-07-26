@@ -11,19 +11,15 @@ import DI
 
 final class ClothesListPresenter: NSObject, ClothesListPresentation, Injectable {
 
-    struct Dependency {
-        let view: ClothesListView
-        let wireframe: ClothesListWireframe
-    }
-    var view: ClothesListView
+    typealias Dependency = ClothesListWireframe
+    var view: ClothesListView?
     var wireframe: ClothesListWireframe
     
     init(dependency: Dependency) {
-        self.view = dependency.view
-        self.wireframe = dependency.wireframe
+        self.wireframe = dependency
     }
 
     func viewDidLoad() {
-        self.view.prepare()
+        self.view?.prepare()
     }
 }

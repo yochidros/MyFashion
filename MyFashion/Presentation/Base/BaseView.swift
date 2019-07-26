@@ -11,6 +11,7 @@ import UIKit
 
 protocol BaseView {
 }
+
 protocol BasePresentation {
     func viewDidLoad()
     func viewWillAppear()
