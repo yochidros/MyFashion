@@ -2,3 +2,7 @@
 #SnapKit
 # https://github.com/SnapKit/SnapKit
 github "SnapKit/SnapKit" ~> 5.0.0
+
+# Realm
+# https://realm.io/docs/swift/latest/#installation
+github "realm/realm-cocoa"

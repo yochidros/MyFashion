@@ -72,6 +72,9 @@
 		CEE29FD122E59C27001600E7 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29FD022E59C27001600E7 /* UICollectionView+Extension.swift */; };
 		CEE29FD322E59FAF001600E7 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29FD222E59FAF001600E7 /* RootViewController.swift */; };
 		CEE8723D22EE805D008934E4 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE8723C22EE805D008934E4 /* SnapKit.framework */; };
+		CEE8724122EEEFBC008934E4 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE8723F22EEEFBC008934E4 /* RealmSwift.framework */; };
+		CEE8724222EEEFBC008934E4 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE8724022EEEFBC008934E4 /* Realm.framework */; };
+		CEE8724522EEF91E008934E4 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8724422EEF91E008934E4 /* RealmManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,6 +246,9 @@
 		CEE29FD022E59C27001600E7 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		CEE29FD222E59FAF001600E7 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		CEE8723C22EE805D008934E4 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		CEE8723F22EEEFBC008934E4 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		CEE8724022EEEFBC008934E4 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		CEE8724422EEF91E008934E4 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +256,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE8724122EEEFBC008934E4 /* RealmSwift.framework in Frameworks */,
+				CEE8724222EEEFBC008934E4 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +377,7 @@
 		CE4F707422EAA384002E19A9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				CEE8724322EEF911008934E4 /* Manager */,
 				CE4F709122EAA3CD002E19A9 /* Entity */,
 				CE4F709022EAA3C6002E19A9 /* DataStore */,
 				CE4F707522EAA384002E19A9 /* Data.h */,
@@ -389,8 +398,7 @@
 		CE4F709022EAA3C6002E19A9 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
-				CE4F709622EAA498002E19A9 /* ClothesListDataStore.swift */,
-				CE4F70D622EAD74C002E19A9 /* ClothesListDataStoreResolver.swift */,
+				CEE8724622EEFA08008934E4 /* ClothesList */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -406,6 +414,8 @@
 		CE4F709822EAA5A1002E19A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEE8724022EEEFBC008934E4 /* Realm.framework */,
+				CEE8723F22EEEFBC008934E4 /* RealmSwift.framework */,
 				CEE8723C22EE805D008934E4 /* SnapKit.framework */,
 			);
 			name = Frameworks;
@@ -717,6 +727,23 @@
 				CEE29FCD22E59B4B001600E7 /* TabCollectionViewCell.xib */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		CEE8724322EEF911008934E4 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CEE8724422EEF91E008934E4 /* RealmManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		CEE8724622EEFA08008934E4 /* ClothesList */ = {
+			isa = PBXGroup;
+			children = (
+				CE4F709622EAA498002E19A9 /* ClothesListDataStore.swift */,
+				CE4F70D622EAD74C002E19A9 /* ClothesListDataStoreResolver.swift */,
+			);
+			path = ClothesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1073,6 +1100,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -1092,6 +1121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4F70D722EAD74C002E19A9 /* ClothesListDataStoreResolver.swift in Sources */,
+				CEE8724522EEF91E008934E4 /* RealmManager.swift in Sources */,
 				CE4F709722EAA498002E19A9 /* ClothesListDataStore.swift in Sources */,
 				CE4F709522EAA46D002E19A9 /* TabEntity.swift in Sources */,
 			);
@@ -1285,6 +1315,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Data/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1316,6 +1350,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Data/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
