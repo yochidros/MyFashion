@@ -16,15 +16,11 @@ class ClothesListViewController: UIViewController, ClothesListView, Injectable {
     var presenter: ClothesListPresentation
     
     fileprivate var contentsViewControllers: [UIViewController] = []
-    
+    fileprivate var currentIndex: Int = 0 
+
     fileprivate lazy var pageViewController: UIPageViewController = {
         let page = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        let frame: CGRect = CGRect(x: 0, y: self.tabView?.frame.height ?? 0, width: self.view.bounds.width, height: self.view.bounds.height - (self.tabView?.bounds.height ?? 0))
-        page.view.frame = frame
         self.view.addSubview(page.view)
-        if let tab = self.tabView {
-            self.view.bringSubviewToFront(tab)
-        }
         return page
     }()
 
@@ -39,7 +35,19 @@ class ClothesListViewController: UIViewController, ClothesListView, Injectable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: false)
         presenter.viewDidLoad()
+        preparePageViewControlller()
+    }
+    
+
+    private func preparePageViewControlller() {
+        pageViewController.view.snp.makeConstraints { [weak self] (make) in
+            if let tab = self?.tabView {
+                make.top.equalTo(tab.snp.bottom)
+            }
+            make.leading.trailing.bottom.equalToSuperview()
+        }
     }
     
     func prepareTab(tabs: [TabType]) {
@@ -47,26 +55,48 @@ class ClothesListViewController: UIViewController, ClothesListView, Injectable {
     }
     
     func preparePageViewController(pages: [UIViewController]) {
+        guard pages.count > 0 else { return }
         self.contentsViewControllers = pages
         pageViewController.dataSource = self
+        pageViewController.delegate = self
         pageViewController.setViewControllers([pages.first!], direction: .forward, animated: false, completion: nil)
+        currentIndex = 0
+        tabView?.setIndex(index: currentIndex)
     }
     
     func displayViewController(index: Int) {
-        pageViewController.setViewControllers([contentsViewControllers[index]], direction: .forward, animated: true, completion: nil)
+        pageViewController.setViewControllers(
+            [contentsViewControllers[index]],
+            direction: currentIndex > index ? .reverse : .forward,
+            animated: true,
+            completion: nil
+        )
+        currentIndex = index
+        tabView?.setIndex(index: currentIndex)
     }
 }
 
+extension ClothesListViewController: UIPageViewControllerDelegate {
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if let current = pageViewController.viewControllers?.first {
+            let index = contentsViewControllers.firstIndex(of: current) ?? 0
+            self.currentIndex = index
+        }
+        tabView?.setIndex(index: currentIndex)
+    }
+}
 extension ClothesListViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let index = contentsViewControllers.firstIndex(of: viewController), index+1 < contentsViewControllers.count else {
+        guard let index = contentsViewControllers.firstIndex(of: viewController),
+            index+1 < contentsViewControllers.count else {
             return nil
         }
         return contentsViewControllers[index+1]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let index = contentsViewControllers.firstIndex(of: viewController), index-1 > 0 else {
+        guard let index = contentsViewControllers.firstIndex(of: viewController),
+            index-1 >= 0 else {
             return nil
         }
         return contentsViewControllers[index-1]
