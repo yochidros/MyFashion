@@ -25,7 +25,8 @@ final class RootPresenter: RootPresentation, Injectable {
     
     func prepare() {
         let clothes = ClothesListResolver.resolve()
-        self.wireframe.setViewControllers([clothes])
+        let coordinate = CoordinateRouter.assembleModule()
+        self.wireframe.setViewControllers([clothes, coordinate])
     }
     
 }

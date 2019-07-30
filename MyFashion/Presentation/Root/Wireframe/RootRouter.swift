@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 class RootRouter: RootWireframe {
     var viewController: UIViewController?
@@ -28,6 +29,25 @@ class RootRouter: RootWireframe {
 
     func setViewControllers(_ viewControllers: [UIViewController]) {
         self.tabBarController?.setViewControllers(viewControllers, animated: false)
+        guard let tabbar = self.tabBarController?.tabBar else { return }
+        
+        let view = CameraTabView()
+        view.backgroundColor = .red
+        tabbar.insertSubview(view, at: 1)
+        let width = tabbar.frame.width / CGFloat(tabbar.subviews.count)
+        let height = tabbar.frame.height
+        var left = tabbar.snp.left
+        
+        for v in tabbar.subviews {
+            v.snp.makeConstraints { (make) in
+                make.height.equalTo(height)
+                make.width.equalTo(width)
+                make.top.equalTo(tabbar)
+                make.left.equalTo(left)
+            }
+            left = v.snp.right
+        }
+        
     }
 }
 

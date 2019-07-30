@@ -50,6 +50,12 @@
 		CE7A64FA22EFE15F00336EB9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE8724022EEEFBC008934E4 /* Realm.framework */; };
 		CE7A64FB22EFE15F00336EB9 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE8723F22EEEFBC008934E4 /* RealmSwift.framework */; };
 		CE7A64FE22F000EE00336EB9 /* ClothesContentWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A64FD22F000EE00336EB9 /* ClothesContentWireframe.swift */; };
+		CE983E8022F02573000A139D /* CoordinateWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983E7F22F02573000A139D /* CoordinateWireframe.swift */; };
+		CE983E8422F025A6000A139D /* CoordinateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983E8222F025A6000A139D /* CoordinateViewController.swift */; };
+		CE983E8522F025A6000A139D /* CoordinateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE983E8322F025A6000A139D /* CoordinateViewController.xib */; };
+		CE983E8722F025F1000A139D /* CoordinateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983E8622F025F1000A139D /* CoordinateRouter.swift */; };
+		CE983E8A22F02895000A139D /* CameraTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE983E8922F02895000A139D /* CameraTabView.swift */; };
+		CE983E8C22F02925000A139D /* CameraTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE983E8B22F02925000A139D /* CameraTabView.xib */; };
 		CEABD06322E978C400F782A5 /* ClothesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD06222E978C400F782A5 /* ClothesListView.swift */; };
 		CEABD06622E978EC00F782A5 /* ClothesListPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD06522E978EC00F782A5 /* ClothesListPresentation.swift */; };
 		CEABD06822E9792000F782A5 /* ClothesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD06722E9792000F782A5 /* ClothesListPresenter.swift */; };
@@ -227,6 +233,12 @@
 		CE4F70DA22EAE37E002E19A9 /* ClothesContentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClothesContentsViewController.xib; sourceTree = "<group>"; };
 		CE7A64F822EFDCCF00336EB9 /* RealmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTests.swift; sourceTree = "<group>"; };
 		CE7A64FD22F000EE00336EB9 /* ClothesContentWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClothesContentWireframe.swift; path = MyFashion/Presentation/ClothesList/Contents/ClothesContentWireframe.swift; sourceTree = SOURCE_ROOT; };
+		CE983E7F22F02573000A139D /* CoordinateWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateWireframe.swift; sourceTree = "<group>"; };
+		CE983E8222F025A6000A139D /* CoordinateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateViewController.swift; sourceTree = "<group>"; };
+		CE983E8322F025A6000A139D /* CoordinateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoordinateViewController.xib; sourceTree = "<group>"; };
+		CE983E8622F025F1000A139D /* CoordinateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateRouter.swift; sourceTree = "<group>"; };
+		CE983E8922F02895000A139D /* CameraTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTabView.swift; sourceTree = "<group>"; };
+		CE983E8B22F02925000A139D /* CameraTabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraTabView.xib; sourceTree = "<group>"; };
 		CEABD06222E978C400F782A5 /* ClothesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListView.swift; sourceTree = "<group>"; };
 		CEABD06522E978EC00F782A5 /* ClothesListPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListPresentation.swift; sourceTree = "<group>"; };
 		CEABD06722E9792000F782A5 /* ClothesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListPresenter.swift; sourceTree = "<group>"; };
@@ -576,6 +588,42 @@
 			path = Wireframe;
 			sourceTree = "<group>";
 		};
+		CE983E7D22F0255C000A139D /* Coordinate */ = {
+			isa = PBXGroup;
+			children = (
+				CE983E8122F0258B000A139D /* ViewController */,
+				CE983E7E22F02565000A139D /* Wireframe */,
+			);
+			path = Coordinate;
+			sourceTree = "<group>";
+		};
+		CE983E7E22F02565000A139D /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				CE983E7F22F02573000A139D /* CoordinateWireframe.swift */,
+				CE983E8622F025F1000A139D /* CoordinateRouter.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		CE983E8122F0258B000A139D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE983E8222F025A6000A139D /* CoordinateViewController.swift */,
+				CE983E8322F025A6000A139D /* CoordinateViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CE983E8822F0287D000A139D /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				CE983E8922F02895000A139D /* CameraTabView.swift */,
+				CE983E8B22F02925000A139D /* CameraTabView.xib */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
 		CEABD06422E978D500F782A5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -737,6 +785,7 @@
 		CEE29FB722E58F7A001600E7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CE983E7D22F0255C000A139D /* Coordinate */,
 				CEABD06922E97A2700F782A5 /* Base */,
 				CEE29FB922E59056001600E7 /* ClothesList */,
 				CEE29FB822E58F7F001600E7 /* Root */,
@@ -769,6 +818,7 @@
 		CEE29FC022E593E2001600E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE983E8822F0287D000A139D /* Camera */,
 				CE14505222F00CB500A94A81 /* ClothesList */,
 				CEE29FC122E593E7001600E7 /* Tab */,
 			);
@@ -1140,6 +1190,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE29FCF22E59B4B001600E7 /* TabCollectionViewCell.xib in Resources */,
+				CE983E8C22F02925000A139D /* CameraTabView.xib in Resources */,
+				CE983E8522F025A6000A139D /* CoordinateViewController.xib in Resources */,
 				CEE29F9322E58D94001600E7 /* LaunchScreen.storyboard in Resources */,
 				CEE29F9022E58D94001600E7 /* Assets.xcassets in Resources */,
 				CEE29F8E22E58D93001600E7 /* Root.storyboard in Resources */,
@@ -1270,6 +1322,7 @@
 				CE4F703E22EA9A85002E19A9 /* ClothesListRouter.swift in Sources */,
 				CEABD06322E978C400F782A5 /* ClothesListView.swift in Sources */,
 				CE4F70DB22EAE37E002E19A9 /* ClothesContentsViewController.swift in Sources */,
+				CE983E8A22F02895000A139D /* CameraTabView.swift in Sources */,
 				CE4F703222EA9228002E19A9 /* RootWireframe.swift in Sources */,
 				CEE29F8922E58D93001600E7 /* AppDelegate.swift in Sources */,
 				CE4F704222EA9D5B002E19A9 /* Tab.swift in Sources */,
@@ -1283,9 +1336,12 @@
 				CEE29FCE22E59B4B001600E7 /* TabCollectionViewCell.swift in Sources */,
 				CE14505122F00C5C00A94A81 /* ClothesContentsRouter.swift in Sources */,
 				CEABD06822E9792000F782A5 /* ClothesListPresenter.swift in Sources */,
+				CE983E8422F025A6000A139D /* CoordinateViewController.swift in Sources */,
 				CE14505622F00CDF00A94A81 /* ClothesContentsCollectionViewCell.swift in Sources */,
+				CE983E8722F025F1000A139D /* CoordinateRouter.swift in Sources */,
 				CE4F703C22EA93F5002E19A9 /* RootView.swift in Sources */,
 				CEE29FBD22E590C0001600E7 /* ClothesListViewController.swift in Sources */,
+				CE983E8022F02573000A139D /* CoordinateWireframe.swift in Sources */,
 				CEABD06B22E97A3000F782A5 /* BaseView.swift in Sources */,
 				CEE29FC722E5971E001600E7 /* NSObject+Extension.swift in Sources */,
 				CE14504F22F00C0100A94A81 /* ClothesContentsPresenter.swift in Sources */,
