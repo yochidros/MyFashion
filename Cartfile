@@ -6,3 +6,7 @@ github "SnapKit/SnapKit" ~> 5.0.0
 # Realm
 # https://realm.io/docs/swift/latest/#installation
 github "realm/realm-cocoa"
+
+# Nuke
+# https://github.com/kean/Nuke/blob/master/Documentation/Guides/Installation%20Guide.md
+github "kean/Nuke" ~> 8.0.1

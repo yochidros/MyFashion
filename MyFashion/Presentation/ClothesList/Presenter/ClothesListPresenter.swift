@@ -40,9 +40,9 @@ final class ClothesListPresenter: ClothesListPresentation, Injectable {
                 return TabType.Normal(t)
             })
             DispatchQueue.main.async { [weak self, types] in
-                let views = types.map({ (type) -> ClothesViewController? in
+                let views = types.map({ (type) -> UIViewController? in
                     if case .Normal(let tab) = type {
-                     return ClothesViewController(tab: tab)
+                        return ClothesContentsRouter.assembleModule(tab: tab)
                     }
                     return nil
                 })

@@ -39,6 +39,7 @@ class DataTests: XCTestCase {
                 expectation.fulfill()
             case .failure(let e):
                 XCTAssert("\(type(of: e))" == "DataStoreError")
+                XCTAssert(e == .unknown)
                 expectation.fulfill()
             }
         }

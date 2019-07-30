@@ -16,11 +16,6 @@ public protocol ClothesListDataStore {
 
 public class ClothesListDataStoreImpl: ClothesListDataStore {
     public func getTabItems(onResult: @escaping (Result<[TabEntity], DataStoreError>) -> Void) {
-        do {
-            let realm = try Realm()
-        } catch let e {
-           onResult(.failure(.unknown))
-        }
         DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(Int.random(in: 0...2))) { [onResult] in
             let items = (0..<Int.random(in: 0..<20)).map({ TabEntity.init(name: "Tab \($0)", index: $0)})
             guard items.count != 0 else {

@@ -1,0 +1,40 @@
+language: objective-c
+os: osx
+
+git:
+  depth: 1
+
+stages:
+  - name: test
+
+jobs:
+  include:
+    - stage: test
+      name: Run Unit Tests (iOS, Xcode 10.2)
+      osx_image: xcode10.2
+      script: Scripts/test.sh iOS xcode10.2
+
+    - stage: test
+      name: Run Unit Tests (macOS, Xcode 10.2)
+      osx_image: xcode10.2
+      script: Scripts/test.sh macOS xcode10.2
+
+    - stage: test
+      name: Run Unit Tests (tvOS, Xcode 10.2)
+      osx_image: xcode10.2
+      script: Scripts/test.sh tvOS xcode10.2
+
+    - stage: test
+      name: Build (watchOS, Xcode 10.2)
+      osx_image: xcode10.2
+      script: Scripts/test.sh watchOS xcode10.2
+
+    - stage: test
+      name: Run Unit Tests (iOS, Xcode 11)
+      osx_image: xcode11
+      script: Scripts/test.sh iOS xcode11
+
+    - stage: test
+      name: Build Demo Project
+      osx_image: xcode11
+      script: Scripts/validate_demo.sh

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE14504A22F0030000A94A81 /* ClothesContentsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14504922F0030000A94A81 /* ClothesContentsPresentation.swift */; };
+		CE14504D22F0036A00A94A81 /* ClothesContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14504C22F0036A00A94A81 /* ClothesContentsView.swift */; };
+		CE14504F22F00C0100A94A81 /* ClothesContentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14504E22F00C0100A94A81 /* ClothesContentsPresenter.swift */; };
+		CE14505122F00C5C00A94A81 /* ClothesContentsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14505022F00C5C00A94A81 /* ClothesContentsRouter.swift */; };
+		CE14505622F00CDF00A94A81 /* ClothesContentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14505422F00CDF00A94A81 /* ClothesContentsCollectionViewCell.swift */; };
+		CE14505722F00CDF00A94A81 /* ClothesContentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE14505522F00CDF00A94A81 /* ClothesContentsCollectionViewCell.xib */; };
+		CE14505922F0118A00A94A81 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE14505822F0118A00A94A81 /* Nuke.framework */; };
+		CE14505B22F011A400A94A81 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14505A22F011A400A94A81 /* UIImageView+Extension.swift */; };
 		CE4F703222EA9228002E19A9 /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F703122EA9228002E19A9 /* RootWireframe.swift */; };
 		CE4F703422EA9337002E19A9 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F703322EA9337002E19A9 /* RootRouter.swift */; };
 		CE4F703722EA93A2002E19A9 /* RootPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F703622EA93A2002E19A9 /* RootPresentation.swift */; };
@@ -36,8 +44,12 @@
 		CE4F70D322EAD309002E19A9 /* ClothesListRepositoryResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F70D222EAD309002E19A9 /* ClothesListRepositoryResolver.swift */; };
 		CE4F70D522EAD3A1002E19A9 /* ClothesListUseCaseResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F70D422EAD3A1002E19A9 /* ClothesListUseCaseResolver.swift */; };
 		CE4F70D722EAD74C002E19A9 /* ClothesListDataStoreResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F70D622EAD74C002E19A9 /* ClothesListDataStoreResolver.swift */; };
-		CE4F70DB22EAE37E002E19A9 /* ClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F70D922EAE37E002E19A9 /* ClothesViewController.swift */; };
-		CE4F70DC22EAE37E002E19A9 /* ClothesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4F70DA22EAE37E002E19A9 /* ClothesViewController.xib */; };
+		CE4F70DB22EAE37E002E19A9 /* ClothesContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F70D922EAE37E002E19A9 /* ClothesContentsViewController.swift */; };
+		CE4F70DC22EAE37E002E19A9 /* ClothesContentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4F70DA22EAE37E002E19A9 /* ClothesContentsViewController.xib */; };
+		CE7A64F922EFDCCF00336EB9 /* RealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A64F822EFDCCF00336EB9 /* RealmTests.swift */; };
+		CE7A64FA22EFE15F00336EB9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE8724022EEEFBC008934E4 /* Realm.framework */; };
+		CE7A64FB22EFE15F00336EB9 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE8723F22EEEFBC008934E4 /* RealmSwift.framework */; };
+		CE7A64FE22F000EE00336EB9 /* ClothesContentWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A64FD22F000EE00336EB9 /* ClothesContentWireframe.swift */; };
 		CEABD06322E978C400F782A5 /* ClothesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD06222E978C400F782A5 /* ClothesListView.swift */; };
 		CEABD06622E978EC00F782A5 /* ClothesListPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD06522E978EC00F782A5 /* ClothesListPresentation.swift */; };
 		CEABD06822E9792000F782A5 /* ClothesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEABD06722E9792000F782A5 /* ClothesListPresenter.swift */; };
@@ -174,6 +186,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE14504922F0030000A94A81 /* ClothesContentsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesContentsPresentation.swift; sourceTree = "<group>"; };
+		CE14504C22F0036A00A94A81 /* ClothesContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesContentsView.swift; sourceTree = "<group>"; };
+		CE14504E22F00C0100A94A81 /* ClothesContentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesContentsPresenter.swift; sourceTree = "<group>"; };
+		CE14505022F00C5C00A94A81 /* ClothesContentsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesContentsRouter.swift; sourceTree = "<group>"; };
+		CE14505422F00CDF00A94A81 /* ClothesContentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesContentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE14505522F00CDF00A94A81 /* ClothesContentsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClothesContentsCollectionViewCell.xib; sourceTree = "<group>"; };
+		CE14505822F0118A00A94A81 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
+		CE14505A22F011A400A94A81 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		CE4F703122EA9228002E19A9 /* RootWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
 		CE4F703322EA9337002E19A9 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		CE4F703622EA93A2002E19A9 /* RootPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresentation.swift; sourceTree = "<group>"; };
@@ -203,8 +223,10 @@
 		CE4F70D222EAD309002E19A9 /* ClothesListRepositoryResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListRepositoryResolver.swift; sourceTree = "<group>"; };
 		CE4F70D422EAD3A1002E19A9 /* ClothesListUseCaseResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListUseCaseResolver.swift; sourceTree = "<group>"; };
 		CE4F70D622EAD74C002E19A9 /* ClothesListDataStoreResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListDataStoreResolver.swift; sourceTree = "<group>"; };
-		CE4F70D922EAE37E002E19A9 /* ClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesViewController.swift; sourceTree = "<group>"; };
-		CE4F70DA22EAE37E002E19A9 /* ClothesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClothesViewController.xib; sourceTree = "<group>"; };
+		CE4F70D922EAE37E002E19A9 /* ClothesContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesContentsViewController.swift; sourceTree = "<group>"; };
+		CE4F70DA22EAE37E002E19A9 /* ClothesContentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClothesContentsViewController.xib; sourceTree = "<group>"; };
+		CE7A64F822EFDCCF00336EB9 /* RealmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTests.swift; sourceTree = "<group>"; };
+		CE7A64FD22F000EE00336EB9 /* ClothesContentWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClothesContentWireframe.swift; path = MyFashion/Presentation/ClothesList/Contents/ClothesContentWireframe.swift; sourceTree = SOURCE_ROOT; };
 		CEABD06222E978C400F782A5 /* ClothesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListView.swift; sourceTree = "<group>"; };
 		CEABD06522E978EC00F782A5 /* ClothesListPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListPresentation.swift; sourceTree = "<group>"; };
 		CEABD06722E9792000F782A5 /* ClothesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListPresenter.swift; sourceTree = "<group>"; };
@@ -265,6 +287,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7A64FA22EFE15F00336EB9 /* Realm.framework in Frameworks */,
+				CE7A64FB22EFE15F00336EB9 /* RealmSwift.framework in Frameworks */,
 				CE4F707C22EAA384002E19A9 /* Data.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +329,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE14505922F0118A00A94A81 /* Nuke.framework in Frameworks */,
 				CEE8723D22EE805D008934E4 /* SnapKit.framework in Frameworks */,
 				CE4F70B822EAB3D5002E19A9 /* Domain.framework in Frameworks */,
 				CE4F708822EAA384002E19A9 /* Data.framework in Frameworks */,
@@ -329,6 +354,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE14504822F002F200A94A81 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CE14504922F0030000A94A81 /* ClothesContentsPresentation.swift */,
+				CE14504E22F00C0100A94A81 /* ClothesContentsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CE14504B22F0031900A94A81 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE4F70D922EAE37E002E19A9 /* ClothesContentsViewController.swift */,
+				CE4F70DA22EAE37E002E19A9 /* ClothesContentsViewController.xib */,
+				CE14504C22F0036A00A94A81 /* ClothesContentsView.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CE14505222F00CB500A94A81 /* ClothesList */ = {
+			isa = PBXGroup;
+			children = (
+				CE14505322F00CBF00A94A81 /* CollectionViewCell */,
+			);
+			path = ClothesList;
+			sourceTree = "<group>";
+		};
+		CE14505322F00CBF00A94A81 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE14505422F00CDF00A94A81 /* ClothesContentsCollectionViewCell.swift */,
+				CE14505522F00CDF00A94A81 /* ClothesContentsCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		CE4F703022EA9214002E19A9 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +452,7 @@
 			children = (
 				CE4F708222EAA384002E19A9 /* DataTests.swift */,
 				CE4F708422EAA384002E19A9 /* Info.plist */,
+				CE7A64F822EFDCCF00336EB9 /* RealmTests.swift */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
@@ -414,6 +476,7 @@
 		CE4F709822EAA5A1002E19A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE14505822F0118A00A94A81 /* Nuke.framework */,
 				CEE8724022EEEFBC008934E4 /* Realm.framework */,
 				CEE8723F22EEEFBC008934E4 /* RealmSwift.framework */,
 				CEE8723C22EE805D008934E4 /* SnapKit.framework */,
@@ -497,10 +560,20 @@
 		CE4F70D822EAE36C002E19A9 /* Contents */ = {
 			isa = PBXGroup;
 			children = (
-				CE4F70D922EAE37E002E19A9 /* ClothesViewController.swift */,
-				CE4F70DA22EAE37E002E19A9 /* ClothesViewController.xib */,
+				CE14504B22F0031900A94A81 /* ViewController */,
+				CE14504822F002F200A94A81 /* Presenter */,
+				CE7A64FC22EFFC4F00336EB9 /* Wireframe */,
 			);
 			path = Contents;
+			sourceTree = "<group>";
+		};
+		CE7A64FC22EFFC4F00336EB9 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A64FD22F000EE00336EB9 /* ClothesContentWireframe.swift */,
+				CE14505022F00C5C00A94A81 /* ClothesContentsRouter.swift */,
+			);
+			path = Wireframe;
 			sourceTree = "<group>";
 		};
 		CEABD06422E978D500F782A5 /* Presenter */ = {
@@ -696,6 +769,7 @@
 		CEE29FC022E593E2001600E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE14505222F00CB500A94A81 /* ClothesList */,
 				CEE29FC122E593E7001600E7 /* Tab */,
 			);
 			path = Views;
@@ -716,6 +790,7 @@
 			children = (
 				CEE29FC622E5971E001600E7 /* NSObject+Extension.swift */,
 				CEE29FD022E59C27001600E7 /* UICollectionView+Extension.swift */,
+				CE14505A22F011A400A94A81 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1069,8 +1144,9 @@
 				CEE29F9022E58D94001600E7 /* Assets.xcassets in Resources */,
 				CEE29F8E22E58D93001600E7 /* Root.storyboard in Resources */,
 				CEE29FBE22E590C0001600E7 /* ClothesListViewController.xib in Resources */,
+				CE14505722F00CDF00A94A81 /* ClothesContentsCollectionViewCell.xib in Resources */,
 				CEE29FC922E59757001600E7 /* TabView.xib in Resources */,
-				CE4F70DC22EAE37E002E19A9 /* ClothesViewController.xib in Resources */,
+				CE4F70DC22EAE37E002E19A9 /* ClothesContentsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1102,6 +1178,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -1132,6 +1209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4F708322EAA384002E19A9 /* DataTests.swift in Sources */,
+				CE7A64F922EFDCCF00336EB9 /* RealmTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1185,10 +1263,13 @@
 			files = (
 				CEE29FD122E59C27001600E7 /* UICollectionView+Extension.swift in Sources */,
 				CE4F703722EA93A2002E19A9 /* RootPresentation.swift in Sources */,
+				CE14505B22F011A400A94A81 /* UIImageView+Extension.swift in Sources */,
 				CE4F703422EA9337002E19A9 /* RootRouter.swift in Sources */,
+				CE14504A22F0030000A94A81 /* ClothesContentsPresentation.swift in Sources */,
+				CE7A64FE22F000EE00336EB9 /* ClothesContentWireframe.swift in Sources */,
 				CE4F703E22EA9A85002E19A9 /* ClothesListRouter.swift in Sources */,
 				CEABD06322E978C400F782A5 /* ClothesListView.swift in Sources */,
-				CE4F70DB22EAE37E002E19A9 /* ClothesViewController.swift in Sources */,
+				CE4F70DB22EAE37E002E19A9 /* ClothesContentsViewController.swift in Sources */,
 				CE4F703222EA9228002E19A9 /* RootWireframe.swift in Sources */,
 				CEE29F8922E58D93001600E7 /* AppDelegate.swift in Sources */,
 				CE4F704222EA9D5B002E19A9 /* Tab.swift in Sources */,
@@ -1196,14 +1277,18 @@
 				CEABD0A822E9B52100F782A5 /* ClothesListResolver.swift in Sources */,
 				CEE29FC422E5947B001600E7 /* TabView.swift in Sources */,
 				CEABD06F22E97C2200F782A5 /* ClothesListWireframe.swift in Sources */,
+				CE14504D22F0036A00A94A81 /* ClothesContentsView.swift in Sources */,
 				CEE29FD322E59FAF001600E7 /* RootViewController.swift in Sources */,
 				CE4F703922EA93C8002E19A9 /* RootPresenter.swift in Sources */,
 				CEE29FCE22E59B4B001600E7 /* TabCollectionViewCell.swift in Sources */,
+				CE14505122F00C5C00A94A81 /* ClothesContentsRouter.swift in Sources */,
 				CEABD06822E9792000F782A5 /* ClothesListPresenter.swift in Sources */,
+				CE14505622F00CDF00A94A81 /* ClothesContentsCollectionViewCell.swift in Sources */,
 				CE4F703C22EA93F5002E19A9 /* RootView.swift in Sources */,
 				CEE29FBD22E590C0001600E7 /* ClothesListViewController.swift in Sources */,
 				CEABD06B22E97A3000F782A5 /* BaseView.swift in Sources */,
 				CEE29FC722E5971E001600E7 /* NSObject+Extension.swift in Sources */,
+				CE14504F22F00C0100A94A81 /* ClothesContentsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1377,6 +1462,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DataTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1397,6 +1486,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DataTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
