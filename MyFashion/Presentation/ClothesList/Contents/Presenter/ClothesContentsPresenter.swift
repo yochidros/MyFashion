@@ -12,6 +12,7 @@ import Domain
 
 final class ClothesContentsPresenter: NSObject, ClothesContentsPresentation, Injectable {
     
+    private let contentsCountPerRow: Int = 3
     var view: ClothesContentsView?
     var wireframe: ClothesContentsWireframe
     
@@ -49,7 +50,7 @@ extension ClothesContentsPresenter: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = UIScreen.main.bounds.width / 2 - 8*2
+        let width = (UIScreen.main.bounds.width / CGFloat(contentsCountPerRow)) - 8*2
         return CGSize(width: width, height: width*1.2)
     }
 }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionSheetViewController" customModule="MyFashion" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonStackView" destination="eiw-kL-lJy" id="SPU-II-6be"/>
+                <outlet property="cancelButton" destination="e3F-TI-GeF" id="5WC-9T-sYg"/>
+                <outlet property="contentView" destination="4Zs-Eb-Zf5" id="fR0-EG-szX"/>
+                <outlet property="overlayView" destination="lvm-uu-C5h" id="HSc-lS-2vv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvm-uu-C5h">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.19842099471830985" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Zs-Eb-Zf5">
+                    <rect key="frame" x="0.0" y="752" width="414" height="144"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eiw-kL-lJy">
+                            <rect key="frame" x="16" y="32" width="382" height="48"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3F-TI-GeF">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="6Iw-Ek-xRF"/>
+                                    </constraints>
+                                    <state key="normal" title="閉じる">
+                                        <color key="titleColor" red="1" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="eiw-kL-lJy" secondAttribute="bottom" constant="64" id="4GT-f1-KzT"/>
+                        <constraint firstItem="eiw-kL-lJy" firstAttribute="leading" secondItem="4Zs-Eb-Zf5" secondAttribute="leading" constant="16" id="8sn-FC-VWg"/>
+                        <constraint firstAttribute="trailing" secondItem="eiw-kL-lJy" secondAttribute="trailing" constant="16" id="Hrn-np-1Rk"/>
+                        <constraint firstItem="eiw-kL-lJy" firstAttribute="top" secondItem="4Zs-Eb-Zf5" secondAttribute="top" constant="32" id="ISU-W1-BtH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4Zs-Eb-Zf5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1WE-bC-Hrj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Zs-Eb-Zf5" secondAttribute="trailing" id="6eT-tK-jAY"/>
+                <constraint firstItem="lvm-uu-C5h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="D9s-Gc-P2g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lvm-uu-C5h" secondAttribute="bottom" id="TRY-M6-uRM"/>
+                <constraint firstItem="lvm-uu-C5h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Z7Q-IE-PX5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lvm-uu-C5h" secondAttribute="trailing" id="nGc-NA-2Q9"/>
+                <constraint firstAttribute="bottom" secondItem="4Zs-Eb-Zf5" secondAttribute="bottom" id="tR3-yV-Ba2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="130.58035714285714"/>
+        </view>
+    </objects>
+</document>

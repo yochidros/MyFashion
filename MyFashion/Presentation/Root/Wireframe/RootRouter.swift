@@ -29,10 +29,13 @@ class RootRouter: RootWireframe {
 
     func setViewControllers(_ viewControllers: [UIViewController]) {
         self.tabBarController?.setViewControllers(viewControllers, animated: false)
-        guard let tabbar = self.tabBarController?.tabBar else { return }
-        
+        self.insertCameraTabIfNeed()
+    }
+    
+    private func insertCameraTabIfNeed() {
+        guard let tabbar = self.tabBarController?.tabBar, tabbar.subviews.count < 3 else { return }
         let view = CameraTabView()
-        view.backgroundColor = .red
+        view.delegate = self
         tabbar.insertSubview(view, at: 1)
         let width = tabbar.frame.width / CGFloat(tabbar.subviews.count)
         let height = tabbar.frame.height
@@ -48,6 +51,17 @@ class RootRouter: RootWireframe {
             left = v.snp.right
         }
         
+    }
+}
+extension RootRouter: CameraTabViewDelegate, ActionSheetViewControllerDelegate {
+    func didTapped(_ view: CameraTabView) {
+        let action = ActionSheetViewController(delegate: self)
+        self.tabBarController?.present(action, animated: true, completion: nil)
+    }
+    
+    func closeSheet(_ view: ActionSheetViewController) {
+//        self.tabBarController?.modalPresentationStyle = .custom
+       self.tabBarController?.dismiss(animated: true, completion: nil)
     }
 }
 

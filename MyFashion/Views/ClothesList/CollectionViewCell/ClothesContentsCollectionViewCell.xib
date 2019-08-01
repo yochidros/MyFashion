@@ -69,6 +69,7 @@
             <size key="customSize" width="217" height="250"/>
             <connections>
                 <outlet property="brandLabel" destination="ihs-bT-pE7" id="0Aa-7I-C4y"/>
+                <outlet property="contentsView" destination="9NC-EF-ucJ" id="SX8-O1-Dkl"/>
                 <outlet property="imageView" destination="l4F-l6-WNe" id="sLW-0X-KgA"/>
                 <outlet property="nameLabel" destination="E49-7J-Y8J" id="LUF-OI-x0G"/>
             </connections>

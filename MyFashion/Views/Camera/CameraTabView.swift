@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol CameraTabViewDelegate: class {
+    func didTapped(_ view: CameraTabView)
+}
 class CameraTabView: UIView {
     @IBOutlet weak var iconImageView: UIImageView?
+    
+    weak var delegate: CameraTabViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,6 +34,12 @@ class CameraTabView: UIView {
         self.backgroundColor = .clear
         
         iconImageView?.loadImage(url: "https://developer.apple.com/design/human-interface-guidelines/ios/images/icons/navigation_bar_toobar_icons/Navigation_Camera.png")
+        iconImageView?.isUserInteractionEnabled = true
+        iconImageView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedCamera(_:))))
+    }
+    
+    @objc func tappedCamera(_ sender: UIImageView) {
+       delegate?.didTapped(self)
     }
     
     

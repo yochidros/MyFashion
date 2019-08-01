@@ -22,6 +22,10 @@ final class RootViewController: UITabBarController, RootView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        modalPresentationStyle = .custom
+        modalTransitionStyle = .crossDissolve
+        self.definesPresentationContext = true
+        self.providesPresentationContextTransitionStyle = true
         
         if let presentation = RootResolver.resolve(by: self) {
             self.presenter = presentation
